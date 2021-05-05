@@ -6,8 +6,6 @@ Trabajo Práctico - Organización de Datos - 1c2021
 #### Ver si hay mejores formas de graficar lo que ya hay.
 
 Nico:
-#### Relato y orden de la información en los dos notebooks (Nico).
-#### Paleta de colores consistente (Nico).
 #### Heatmap de con hijos y divorciados.
 
 Lukas:

@@ -1,3 +1,6 @@
 matplotlib
-geopandas
 pandas
+seaborn
+numpy
+functools
+operator
