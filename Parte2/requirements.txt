@@ -1,0 +1,9 @@
+matplotlib
+pandas
+seaborn
+numpy
+operator
+functools
+squarify
+dtreeviz
+graphviz
