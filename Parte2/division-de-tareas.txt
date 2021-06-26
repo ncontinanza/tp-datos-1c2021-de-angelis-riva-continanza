@@ -4,7 +4,7 @@ Siempre tener mínimo un 10% para test **OBLIGATORIO**
 
 * Árbol: (Limitar la altura del árbol y limitar la cantidad mínima de casos en las hojas)
 Lukas   - Preprocessing de la primera parte.
-Nico    - Dejar 8000 personas con alto poder adquisitivo y 8000 personas con bajo (Seguramente da mal, pero hay que probar todo)
+Lukas   - Dejar 8000 personas con alto poder adquisitivo y 8000 personas con bajo (Seguramente da mal, pero hay que probar todo)
 Lukas   - Todas las variables (pero recortar mucho la altura)
 
 * SVM:
@@ -15,7 +15,7 @@ Nico    - PCA + TSNE (Realizar PCA y buscar el mejor N que separa los datos en T
 * KNN:
 Lukas   - Preprocessing significantes (PCA con las primeras N mejores componentes) [Buscar el mejor N]
 Nico    - Preprocessing mejor_tsne (buscar las mejores features que nos den algún patrón en tsne)
-Lukas   - PCA + TSNE (Realizar PCA y buscar el mejor N que separa los datos en TSNE antes de aplicar SVM)
+Nico   - PCA + TSNE (Realizar PCA y buscar el mejor N que separa los datos en TSNE antes de aplicar SVM)
 
 * Bayes (Escalado de todas las variables positivas (Usar minmax_scale entre 0 y 1))
 Nico    - Preprocessing de la primera parte.
@@ -23,8 +23,8 @@ Lukas   - Preprocessing mediante árbol (Agarrar las primeras N raíces de un á
 
 * Logistic Regression (Escalar los dato estandarizando (sklearn.preprocessing.scale) y dummy variables, no missings)
 Nico    - Sólo variables numéricas.
-Lukas   - Preprocessing de la primera parte haciendo dummy variables.
-Nico    - Preprocessing mediante árbol (Agarrar las primeras N raíces de un árbol de decisión con todas las variables)
+Nico    - Preprocessing de la primera parte haciendo dummy variables.
+Lukas   - Preprocessing mediante árbol (Agarrar las primeras N raíces de un árbol de decisión con todas las variables)
 Lukas   - (VER) Usar también representatividad poblacional.
 
 * AdaBoost
