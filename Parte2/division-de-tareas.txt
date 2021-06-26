@@ -1,0 +1,59 @@
+<<========================== Modelos sí o sí =========================>>
+
+Siempre tener mínimo un 10% para test **OBLIGATORIO**
+
+* Árbol: (Limitar la altura del árbol y limitar la cantidad mínima de casos en las hojas)
+Lukas   - Preprocessing de la primera parte.
+Nico    - Dejar 8000 personas con alto poder adquisitivo y 8000 personas con bajo (Seguramente da mal, pero hay que probar todo)
+Lukas   - Todas las variables (pero recortar mucho la altura)
+
+* SVM:
+Nico    - Preprocessing significantes (PCA con las primeras 30 mejores componentes)
+Lukas   - Preprocessing mejor_tsne (buscar las mejores features que nos den algún patrón en tsne)
+Nico    - PCA + TSNE (Realizar PCA y buscar el mejor N que separa los datos en TSNE antes de aplicar SVM)
+
+* KNN:
+Lukas   - Preprocessing significantes (PCA con las primeras N mejores componentes) [Buscar el mejor N]
+Nico    - Preprocessing mejor_tsne (buscar las mejores features que nos den algún patrón en tsne)
+Lukas   - PCA + TSNE (Realizar PCA y buscar el mejor N que separa los datos en TSNE antes de aplicar SVM)
+
+* Bayes (Escalado de todas las variables positivas (Usar minmax_scale entre 0 y 1))
+Nico    - Preprocessing de la primera parte.
+Lukas   - Preprocessing mediante árbol (Agarrar las primeras N raíces de un árbol de decisión con todas las variables)
+
+* Logistic Regression (Escalar los dato estandarizando (sklearn.preprocessing.scale) y dummy variables, no missings)
+Nico    - Sólo variables numéricas.
+Lukas   - Preprocessing de la primera parte haciendo dummy variables.
+Nico    - Preprocessing mediante árbol (Agarrar las primeras N raíces de un árbol de decisión con todas las variables)
+Lukas   - (VER) Usar también representatividad poblacional.
+
+* AdaBoost
+Nico    - Crudo (No mandar NaNs) [No hace falta escalar ni hacer one hot encoding] 
+Lukas   - Preprocessing significantes.
+
+* XGBoost (Según internet es similar a AdaBoost)
+Nico    - Crudo (No mandar NaNs) [No hace falta escalar ni hacer one hot encoding] 
+Lukas   - Preprocessing significantes.
+
+* Random forest:
+Nico    - Preprocessing de la primera parte.
+Lukas   - Dejar 8000 personas con alto poder adquisitivo y 8000 personas con bajo (Seguramente da mal, pero hay que probar todo)
+Nico    - Todas las variables (pero recortar mucho la altura)
+
+<<========================== Si nos da =========================>>
+
+
+* Voting (Sobre todos los modelos (con sus mejores preprocessings) que voten todos (que sea impar))
+
+* Cascading (Ir buscando el método con mayor precisión [Ver si para 0 o para 1, lo que mejor venga] e ir entrenando modelos con las variables que van quedando (las que no fueron predichas por no tener tal probabilidad. (La probabilidad la estimamos con predic_proba))
+
+* Red neuronal:
+
+<<========================== Preguntar =========================>>
+
+* Qué hacer con la representatividad poblacional? Estaríamos leakeando si la predecimos?
+* Cómo verificar que dos variables categóricas (sin orden) son independientes?
+
+<<========================== Detalles =========================>>
+
+* Tener en cuenta los NaN en variables que no tenían missings en primera instancia (por ejemplo edad) ver de utilizar algún imputer (por ejemplo KNN imputer, etc)
