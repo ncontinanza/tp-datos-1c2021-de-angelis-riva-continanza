@@ -15,17 +15,17 @@ Nico    - PCA + TSNE (Realizar PCA y buscar el mejor N que separa los datos en T
 * KNN:
 Lukas   - Preprocessing significantes (PCA con las primeras N mejores componentes) [Buscar el mejor N]
 Nico    - Preprocessing mejor_tsne (buscar las mejores features que nos den algún patrón en tsne)
-Nico   - PCA + TSNE (Realizar PCA y buscar el mejor N que separa los datos en TSNE antes de aplicar SVM)
+Nico    - PCA + TSNE (Realizar PCA y buscar el mejor N que separa los datos en TSNE antes de aplicar SVM)
 
 * Bayes (Escalado de todas las variables positivas (Usar minmax_scale entre 0 y 1))
 Nico    - Preprocessing de la primera parte.
 Lukas   - Preprocessing mediante árbol (Agarrar las primeras N raíces de un árbol de decisión con todas las variables)
+Lukas   - Ensamble con bayes de todas las features (Gaussiano para las continuas / Multinomial para las discretas / Categorical para las categóricas)
 
 * Logistic Regression (Escalar los dato estandarizando (sklearn.preprocessing.scale) y dummy variables, no missings)
 Nico    - Sólo variables numéricas.
 Nico    - Preprocessing de la primera parte haciendo dummy variables.
 Lukas   - Preprocessing mediante árbol (Agarrar las primeras N raíces de un árbol de decisión con todas las variables)
-Lukas   - (VER) Usar también representatividad poblacional.
 
 * AdaBoost
 Nico    - Crudo (No mandar NaNs) [No hace falta escalar ni hacer one hot encoding] 
@@ -51,7 +51,6 @@ Nico    - Todas las variables (pero recortar mucho la altura)
 
 <<========================== Preguntar =========================>>
 
-* Qué hacer con la representatividad poblacional? Estaríamos leakeando si la predecimos?
 * Cómo verificar que dos variables categóricas (sin orden) son independientes?
 
 <<========================== Detalles =========================>>
