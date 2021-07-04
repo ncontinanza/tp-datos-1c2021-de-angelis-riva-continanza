@@ -26,6 +26,5 @@ def preprocessing_significantes(df):
     df = scaler.fit_transform(df)
     return (pd.DataFrame(pca.fit_transform(df)), pa)
 
-# Tenemos en cuenta la representatividad poblacional y la estimamos
-def preprocessing_rep_poblacional(df):
+def preprocessing_tsne(df):
     return
