@@ -9,12 +9,12 @@ Siempre tener mínimo un 10% para test **OBLIGATORIO**
 * SVM:
 (OK)Nico    - Preprocessing significantes (PCA con las primeras 30 mejores componentes)
 (OK)Lukas   - Preprocessing mejor_tsne (buscar las mejores features que nos den algún patrón en tsne)
-Nico    - PCA + TSNE (Realizar PCA y buscar el mejor N que separa los datos en TSNE antes de aplicar SVM)
+Nico        - PCA + TSNE (Realizar PCA y buscar el mejor N que separa los datos en TSNE antes de aplicar SVM)
 
 * KNN:
 (OK)Lukas   - Preprocessing significantes (PCA con las primeras N mejores componentes) [Buscar el mejor N]
-Nico    - Preprocessing mejor_tsne (buscar las mejores features que nos den algún patrón en tsne)
-Nico    - PCA + TSNE (Realizar PCA y buscar el mejor N que separa los datos en TSNE antes de aplicar SVM)
+Nico        - Preprocessing mejor_tsne (buscar las mejores features que nos den algún patrón en tsne)
+Nico        - PCA + TSNE (Realizar PCA y buscar el mejor N que separa los datos en TSNE antes de aplicar SVM)
 
 * Bayes (Escalado de todas las variables positivas (Usar minmax_scale entre 0 y 1))
 (OK)Nico    - Preprocessing de la primera parte.
@@ -34,9 +34,17 @@ Nico    - PCA + TSNE (Realizar PCA y buscar el mejor N que separa los datos en T
 Lukas   - Preprocessing significantes.
 
 * Random forest:
-(OK)Lukas    - Preprocessing de la primera parte.
+(OK)Lukas   - Preprocessing de la primera parte.
 (OK)Lukas   - Dejar 8000 personas con alto poder adquisitivo y 8000 personas con bajo (Seguramente da mal, pero hay que probar todo)
-(OK)Lukas    - Todas las variables (pero recortar mucho la altura)
+(OK)Lukas   - Todas las variables (pero recortar mucho la altura)
+
+* Bagging (Árbol):
+(OK)Lukas   - Preprocessing de la primera parte.
+(OK)Lukas   - Todas las variables, con límite de altura.
+
+* Bagging (KNN):
+    ?       - Sólo las variables numéricas.
+    ?       - PCA con 70% de la varianza (O 90%, a ver)
 
 <<========================== Si nos da =========================>>
 
