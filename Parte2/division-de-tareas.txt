@@ -15,7 +15,7 @@ Nico    - PCA + TSNE (Realizar PCA y buscar el mejor N que separa los datos en T
 * Logistic Regression (Escalar los dato estandarizando (sklearn.preprocessing.scale) y dummy variables, no missings)
 (OK)Nico    - Sólo variables numéricas.
 (OK)Nico    - Preprocessing de la primera parte haciendo dummy variables.
-Lukas   - Preprocessing mediante árbol (Agarrar las primeras N raíces de un árbol de decisión con todas las variables)
+(OK)Lukas   - Preprocessing mediante árbol (Agarrar las primeras N raíces de un árbol de decisión con todas las variables)
 
 * XGBoost (Según internet es similar a AdaBoost)
 (Falta correrlo) Nico    - Crudo (No mandar NaNs) [No hace falta escalar ni hacer one hot encoding] 
