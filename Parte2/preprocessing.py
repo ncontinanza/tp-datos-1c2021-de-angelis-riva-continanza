@@ -25,6 +25,3 @@ def preprocessing_significantes(df):
 
     df = scaler.fit_transform(df)
     return (pd.DataFrame(pca.fit_transform(df)), pa)
-
-def preprocessing_tsne(df):
-    return

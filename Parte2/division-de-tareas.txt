@@ -27,7 +27,7 @@ Nico        - PCA + TSNE (Realizar PCA y buscar el mejor N que separa los datos 
 
 * AdaBoost
 (OK)Nico    - Crudo (No mandar NaNs) [No hace falta escalar ni hacer one hot encoding] 
-(TBD)Nico   - Preprocessing significantes.
+(OK)Nico   - Preprocessing significantes.
 
 * XGBoost (Según internet es similar a AdaBoost)
 (Falta correrlo) Nico    - Crudo (No mandar NaNs) [No hace falta escalar ni hacer one hot encoding] 
