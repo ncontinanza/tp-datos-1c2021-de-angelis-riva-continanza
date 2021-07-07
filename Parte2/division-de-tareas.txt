@@ -9,7 +9,7 @@ Nico    - PCA + TSNE (Realizar PCA y buscar el mejor N que separa los datos en T
 
 * KNN:
 (OK)Lukas   - Preprocessing significantes (PCA con las primeras N mejores componentes) [Buscar el mejor N]
-(TBD)Nico    - Preprocessing mejor_tsne (buscar las mejores features que nos den algún patrón en tsne)
+(OK)Nico    - Preprocessing mejor_tsne (buscar las mejores features que nos den algún patrón en tsne)
 (TBD)Nico    - PCA + TSNE (Realizar PCA y buscar el mejor N que separa los datos en TSNE antes de aplicar SVM)
 
 * Logistic Regression (Escalar los dato estandarizando (sklearn.preprocessing.scale) y dummy variables, no missings)
