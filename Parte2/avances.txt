@@ -1,0 +1,55 @@
+#### Árbol
+    * Preprocessing parte 1
+    * Preprocessing equilibrado
+
+#### Naive Bayes
+    * Preprocessing parte 1
+    * PCA de 90% de la varianza (con mixmax scaler, ojo xq va a pasar a ser Normalized no minMax)
+[L] * Preprocessing equilibrado.
+
+#### SVM
+    * Variables que generen mejor separación en TSNE
+[L] * Preprocessing parte 1
+[N] * PCA del __% (con StandarScaler) (Buscando con TSNE la mejor separación a la vista)
+
+#### KNN
+    * Preprocessing parte 1
+    * PCA de 90% de la varianza (con mixmax scaler, ojo xq va a pasar a ser Normalized no minMax)
+    * 4 Mejores variables por árbol de decisión
+    * Mejor separacion tSNE (Antes se llamaba 3 continuas + 4 discretas por árbol de decision, ojo con los nombres.)
+    * PCA del 75% (con StandarScaler)
+
+#### Regresión logística
+[N] * Preprocessing parte 1
+[N] * PCA de 90% de la varianza (con mixmax scaler, ojo xq va a pasar a ser Normalized no minMax)
+    * 4 Mejores variables en un árbol de decisión
+
+#### RandomForest
+    * Preprocessing equilibrado.
+    * Preprocessing parte 1
+    * Preprocessing crudo
+[L] * PCA de 90% de la varianza (con mixmax scaler, ojo xq va a pasar a ser Normalized no minMax)
+
+#### Bagging Árbol
+    * Preprocessing parte 1
+    * preprocessing crudo
+
+#### AdaBoost
+    -- Árboles
+        * Preprocessing parte 1
+        * Preporcessing significantes
+    -- Naive Bayes
+        * Preprocessing parte 1
+    [L] * Preprocessing equilibrado.
+
+#### GradientBoosting
+    * Preprocessing parte 1
+    * PCA de 90% de la varianza (con mixmax scaler, ojo xq va a pasar a ser Normalized no minMax)
+    
+#### Redes Neuronales
+[L]  * PCA 30 variables
+[L&N]* 
+    
+#### Voting
+[L&N]*
+    

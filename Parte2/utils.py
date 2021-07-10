@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import pandas as pd
 
 def get_data():
@@ -32,5 +33,5 @@ def feature_engineering(df):
 
     # Juntamos casado y casada en una misma categoría.
     data_set_mejorado['rol_familiar_registrado'] = data_set_mejorado['rol_familiar_registrado'].apply(lambda x : 'casado' if x == 'casada' else x)
-    
+
     return data_set_mejorado
