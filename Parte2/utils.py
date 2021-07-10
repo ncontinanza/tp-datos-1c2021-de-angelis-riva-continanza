@@ -7,7 +7,7 @@ def get_data():
     )
     TP_GID = '1-DWTP8uwVS-dZY402-dm0F9ICw_6PNqDGLmH0u8Eqa0'
     df = pd.read_csv(GSPREADHSEET_DOWNLOAD_URL(gid=TP_GID))
-    return df
+    return feature_engineering(df)
 
 def get_holdout_data():
     GSPREADHSEET_DOWNLOAD_URL = (
@@ -15,7 +15,7 @@ def get_holdout_data():
     )
     TP_GID = '972751642'
     df = pd.read_csv(GSPREADHSEET_DOWNLOAD_URL(gid=TP_GID))
-    return df
+    return feature_engineering(df)
 
 def feature_engineering(df):
     # Missings en barrio
