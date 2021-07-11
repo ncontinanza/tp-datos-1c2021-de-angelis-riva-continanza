@@ -15,8 +15,7 @@
 #### KNN
 [N]    * Preprocessing parte 1
 [N]    * PCA de 90% de la varianza
-[N]    * 4 Mejores variables por árbol de decisión
-[N]    * Mejor separacion tSNE
+[N]    * Mejor separacion tSNE por árbol
 [N]    * PCA del 75%
 
 #### Regresión logística
