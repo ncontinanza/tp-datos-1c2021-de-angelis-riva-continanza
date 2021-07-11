@@ -60,15 +60,11 @@ def preprocessing_equilibrado(X_train, X_test, y_train, y_test):
 
 
 def preprocessing_4_mejores_variables_arbol(X_train, X_test):
-    #X_train = pd.get_dummies(X_train)
-    #X_test = pd.get_dummies(X_test)
     eleccion = ['anios_estudiados', 'ganancia_perdida_declarada_bolsa_argentina', 'edad', 'rol_familiar_registrado_casado']
     return X_train[eleccion].copy(), X_test[eleccion].copy()
 
 
 def preprocessing_mejor_separacion_tSNE(X_train, X_test):
-    X_train = pd.get_dummies(X_train)
-    X_test = pd.get_dummies(X_test)
     eleccion = ['anios_estudiados', 'ganancia_perdida_declarada_bolsa_argentina', 'edad',
                 'rol_familiar_registrado_casado', 'religion_budismo','trabajo_entretenimiento',
                 'rol_familiar_registrado_otro'] 
