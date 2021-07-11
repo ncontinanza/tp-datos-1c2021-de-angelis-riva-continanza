@@ -27,7 +27,6 @@ def feature_engineering(df):
 
     # Missings en trabajo
     data_set_mejorado['trabajo'] = data_set_mejorado['trabajo'].apply(lambda x: 'No responde' if str(x) == 'nan' else x)
-
     # Eliminación de el atributo eduación alcanzada
     del data_set_mejorado['educacion_alcanzada']
 
