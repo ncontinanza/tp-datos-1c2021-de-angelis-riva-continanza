@@ -67,9 +67,9 @@ def preprocessing_equilibrado(X_train, X_test, y_train, y_test):
     
     return X_train_preproc, X_test, y_train_preproc, y_test
 
-def preprocessing_mejores_por_arbol(X):
+def preprocessing_mejores_por_arbol(X_train, X_test):
     eleccion = ['estado_marital_matrimonio_civil', 'horas_trabajo_registradas',
                 'trabajo_profesional_especializado', 'trabajo_directivo_gerente',
                 'anios_estudiados', 'ganancia_perdida_declarada_bolsa_argentina',
                 'edad', 'rol_familiar_registrado_casado']
-    return X[eleccion].copy()
+    return X_train[eleccion].copy(), X_test[eleccion].copy()
