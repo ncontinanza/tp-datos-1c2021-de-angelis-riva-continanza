@@ -73,3 +73,11 @@ def preprocessing_mejores_por_arbol(X_train, X_test):
                 'anios_estudiados', 'ganancia_perdida_declarada_bolsa_argentina',
                 'edad', 'rol_familiar_registrado_casado']
     return X_train[eleccion].copy(), X_test[eleccion].copy()
+
+
+def standard_preprocessing_mejores_por_arbol(X_train, X_test):
+    X_train, X_test = preprocessing_mejores_por_arbol(X_train, X_test)
+    scaler = StandardScaler()
+    X_train = pd.DataFrame(scaler.fit_transform(X_train))
+    X_test = pd.DataFrame(scaler.transform(X_test))
+    return X_train, X_test
