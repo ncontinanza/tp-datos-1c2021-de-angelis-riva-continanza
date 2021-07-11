@@ -1,13 +1,13 @@
-#### Árbol
+#### Árbol [Tree.ipynb]
 [L]    * Preprocessing parte 1
 [L]    * Preprocessing equilibrado
 
-#### Naive Bayes
+#### Naive Bayes []
 [N]    * Preprocessing parte 1
 [N]    * PCA de 90% de la varianza (con mixmax scaler, ojo xq va a pasar a ser Normalized no minMax)
 [N*]    * Preprocessing equilibrado.
 
-#### SVM
+#### SVM [SVM.ipynb]
 [L]    * Variables que generen mejor separación en TSNE
 [L]    * Preprocessing parte 1
 [L*]    * PCA del __% (con StandarScaler) (Buscando con TSNE la mejor separación a la vista)
@@ -24,13 +24,13 @@
 [N*] * PCA de 90% de la varianza (con mixmax scaler, ojo xq va a pasar a ser Normalized no minMax)
 [N] * 4 Mejores variables en un árbol de decisión
 
-#### RandomForest
+#### RandomForest [RandomForest.ipynb]
 [L] * Preprocessing equilibrado.
 [L] * Preprocessing parte 1
 [L] * Preprocessing crudo
 [L] * PCA de 90% de la varianza (con mixmax scaler, ojo xq va a pasar a ser Normalized no minMax)
 
-#### Bagging Árbol
+#### Bagging Árbol [Bagging.ipynb]
 [L] * Preprocessing parte 1
 [L] * preprocessing crudo
 
