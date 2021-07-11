@@ -4,20 +4,20 @@
 
 #### Naive Bayes []
 [N]    * Preprocessing parte 1
-[N]    * PCA de 90% de la varianza (con mixmax scaler, ojo xq va a pasar a ser Normalized no minMax)
+[N]    * PCA de 90% de la varianza
 [N*]    * Preprocessing equilibrado.
 
 #### SVM [SVM.ipynb]
 [L]    * Variables que generen mejor separación en TSNE
 [L]    * Preprocessing parte 1
-[L*]    * PCA del __% (con StandarScaler) (Buscando con TSNE la mejor separación a la vista)
+[L]    * PCA del 75%
 
 #### KNN
 [N]    * Preprocessing parte 1
-[N]    * PCA de 90% de la varianza (con mixmax scaler, ojo xq va a pasar a ser Normalized no minMax)
+[N]    * PCA de 90% de la varianza
 [N]    * 4 Mejores variables por árbol de decisión
-[N]    * Mejor separacion tSNE (Antes se llamaba 3 continuas + 4 discretas por árbol de decision, ojo con los nombres.)
-[N]    * PCA del 75% (con StandarScaler)
+[N]    * Mejor separacion tSNE
+[N]    * PCA del 75%
 
 #### Regresión logística
 [N*] * Preprocessing parte 1
@@ -28,23 +28,23 @@
 [L] * Preprocessing equilibrado.
 [L] * Preprocessing parte 1
 [L] * Preprocessing crudo
-[L] * PCA de 90% de la varianza (con mixmax scaler, ojo xq va a pasar a ser Normalized no minMax)
+[L] * PCA de 90% de la varianza
 
 #### Bagging Árbol [Bagging.ipynb]
 [L] * Preprocessing parte 1
 [L] * preprocessing crudo
 
-#### AdaBoost
+#### AdaBoost [AdaBoost.ipynb]
     -- Árboles
-[N]        * Preprocessing parte 1
-[N]        * Preporcessing significantes
+[L]        * Preprocessing parte 1
+[L]        * Preporcessing significantes
     -- Naive Bayes
-[N]        * Preprocessing parte 1
-[N*]       * Preprocessing equilibrado.
+[L]        * Preprocessing parte 1
+[L]       * Preprocessing equilibrado.
 
 #### GradientBoosting
 [N]    * Preprocessing parte 1
-[N]    * PCA de 90% de la varianza (con mixmax scaler, ojo xq va a pasar a ser Normalized no minMax)
+[N]    * PCA de 90% de la varianza
 
 #### Redes Neuronales
 [L*]  * PCA 30 variables

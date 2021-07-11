@@ -19,6 +19,15 @@ def preprocessing_base_parte_1(X_train, X_test):
     return X_train_preproc, X_test_preproc
 
 
+def standard_preprocessing_base_parte_1(X_train, X_test):
+    X_train, X_test = preprocessing_base_parte_1(X_train, X_test)
+
+    scaler = StandardScaler()
+    X_train = pd.DataFrame(scaler.fit_transform(X_train))
+    X_test = pd.DataFrame(scaler.transform(X_test))
+    return X_train, X_test
+
+
 # +
 def _log_scale(x):
     return np.sign(x) * (np.log(abs(x)) + 1) if (x < -1 or x > 1) else x
@@ -59,11 +68,12 @@ def preprocessing_equilibrado(X_train, X_test, y_train, y_test):
     return X_train_preproc, X_test, y_train_preproc, y_test
 
 
-def preprocessing_4_mejores_variables_arbol(X_train, X_test):
-    #X_train = pd.get_dummies(X_train)
-    #X_test = pd.get_dummies(X_test)
-    eleccion = ['anios_estudiados', 'ganancia_perdida_declarada_bolsa_argentina', 'edad', 'rol_familiar_registrado_casado']
-    return X_train[eleccion].copy(), X_test[eleccion].copy()
+def preprocessing_mejores_por_arbol(X):
+    eleccion = ['estado_marital_matrimonio_civil', 'horas_trabajo_registradas',
+                'trabajo_profesional_especializado', 'trabajo_directivo_gerente',
+                'anios_estudiados', 'ganancia_perdida_declarada_bolsa_argentina',
+                'edad', 'rol_familiar_registrado_casado']
+    return X[eleccion].copy()
 
 
 def preprocessing_mejor_separacion_tSNE(X_train, X_test):
@@ -73,5 +83,3 @@ def preprocessing_mejor_separacion_tSNE(X_train, X_test):
                 'rol_familiar_registrado_casado', 'religion_budismo','trabajo_entretenimiento',
                 'rol_familiar_registrado_otro'] 
     return X_train[eleccion].copy(), X_test[eleccion].copy()
-
-
