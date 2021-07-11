@@ -24,22 +24,21 @@ def _log_scale(x):
     return np.sign(x) * (np.log(abs(x)) + 1) if (x < -1 or x > 1) else x
 
 def preprocessing_significantes(X_train, X_test, variance):
-    X_train = pd.get_dummies(X_train, drop_first=True)
-    X_test = pd.get_dummies(X_test, drop_first=True)
+    #X_train = pd.get_dummies(X_train, drop_first=True)
+    #X_test = pd.get_dummies(X_test, drop_first=True)
     
     pca_test = PCA()
     scaler = StandardScaler()
-    
+
     X_train['ganancia_perdida_declarada_bolsa_argentina'] = X_train['ganancia_perdida_declarada_bolsa_argentina'].apply(_log_scale)
     X_test['ganancia_perdida_declarada_bolsa_argentina'] = X_test['ganancia_perdida_declarada_bolsa_argentina'].apply(_log_scale)
-    
+   
     X_train_preproc = scaler.fit_transform(X_train)
     X_test_preproc = scaler.transform(X_test)
-    
     pca_test.fit(X_train_preproc)
-    
-    n = (np.cumsum(pca.explained_variance_ratio_) > variance).index(True)
-    pca = PCA(n)
+        
+    variances = np.where((np.cumsum(pca_test.explained_variance_ratio_) > variance)==True)
+    pca = PCA(variances[0][0])
     
     X_train_preproc = pd.DataFrame(pca.fit_transform(X_train_preproc))
     X_test_preproc = pd.DataFrame(pca.transform(X_test_preproc))
@@ -50,8 +49,8 @@ def preprocessing_significantes(X_train, X_test, variance):
 # -
 
 def preprocessing_equilibrado(X_train, X_test, y_train, y_test):
-    X_train = pd.get_dummies(X_train, drop_first=True)
-    X_test = pd.get_dummies(X_test, drop_first=True)
+    #X_train = pd.get_dummies(X_train, drop_first=True)
+    #X_test = pd.get_dummies(X_test, drop_first=True)
 
     X_1 = X_train[y_train==1].copy()
     X_0 = X_train[y_train==0].copy()
@@ -65,8 +64,8 @@ def preprocessing_equilibrado(X_train, X_test, y_train, y_test):
 
 
 def preprocessing_4_mejores_variables_arbol(X_train, X_test):
-    X_train = pd.get_dummies(X_train)
-    X_test = pd.get_dummies(X_test)
+    #X_train = pd.get_dummies(X_train)
+    #X_test = pd.get_dummies(X_test)
     eleccion = ['anios_estudiados', 'ganancia_perdida_declarada_bolsa_argentina', 'edad', 'rol_familiar_registrado_casado']
     return X_train[eleccion].copy(), X_test[eleccion].copy()
 
