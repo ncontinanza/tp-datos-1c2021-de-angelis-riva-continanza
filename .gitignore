@@ -1,3 +1,10 @@
 .ipynb_checkpoints
 venv
 .idea
+Parte2/__pycache__
+Parte2/Bagging
+Parte2/RandomForest
+Parte2/RedesNeuronales
+Parte2/SVM
+Parte2/Tree
+Parte2/Practicas
