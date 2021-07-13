@@ -7,3 +7,5 @@ functools
 squarify
 dtreeviz
 graphviz
+sklearn
+tensorflow
