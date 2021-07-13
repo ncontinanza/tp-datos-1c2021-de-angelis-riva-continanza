@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import pandas as pd
+import numpy as np
 
 def get_data():
     GSPREADHSEET_DOWNLOAD_URL = (
@@ -13,9 +14,22 @@ def get_holdout_data():
     GSPREADHSEET_DOWNLOAD_URL = (
         "https://docs.google.com/spreadsheets/d/{gid}/export?format=csv&id={gid}".format
     )
-    TP_GID = '972751642'
+    TP_GID = '1ObsojtXfzvwicsFieGINPx500oGbUoaVTERTc69pzxE'
     df = pd.read_csv(GSPREADHSEET_DOWNLOAD_URL(gid=TP_GID))
-    return feature_engineering(df)
+    del df['representatividad_poblacional']
+    ids = df['id'].copy()
+    del df['id']
+    return ids, feature_engineering(df)
+
+def escribir_holdout(predicciones : np.array, nombre, ids):
+    archivo = open("Holdout/" + nombre + ".csv", "w")
+    archivo.write("id , tiene_alto_valor_adquisitivo\n")
+    i = 0
+    for prediccion in predicciones:
+        archivo.write(str(ids[i])+ "," + str(prediccion) + "\n")
+        i = i + 1
+    archivo.close()
+
 
 def feature_engineering(df):
     # Missings en barrio
